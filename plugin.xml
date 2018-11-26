@@ -23,7 +23,7 @@
 
 
   <platform name="ios">
-    <preference name="IOS_PHOTO_LIBRARY_USAGE_DESCRIPTION" value="VideoPicker"/>
+    <preference name="IOS_PHOTO_LIBRARY_USAGE_DESCRIPTION" default="This app needs read/write-access photo library access"/>
     <config-file parent="/*" target="config.xml">
       <feature name="MediaPicker">
         <param name="ios-package" value="MediaPicker"/>
@@ -52,7 +52,7 @@
     <resource-file src="src/ios/DMCMediaPicker/es.lproj"/>
     <resource-file src="src/ios/DMCMediaPicker/pt-BR.lproj"/>
     <resource-file src="src/ios/DMCMediaPicker/pt-PT.lproj"/>
-    <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+    <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription" default="This app needs read/write-access photo library access">
       <string>$IOS_PHOTO_LIBRARY_USAGE_DESCRIPTION</string>
     </config-file>  
   </platform>
